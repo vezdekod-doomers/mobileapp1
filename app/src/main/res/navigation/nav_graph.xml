@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/welcomeFragment">
+
+    <fragment android:id="@+id/welcomeFragment" android:name="com.alesharik.hack.app1.fragment.WelcomeFragment"
+              android:label="fragment_welcome" tools:layout="@layout/fragment_welcome">
+        <action android:id="@+id/action_welcomeFragment_to_setPinFragment" app:destination="@id/setPinFragment"
+                app:enterAnim="@android:anim/slide_in_left" app:exitAnim="@android:anim/slide_out_right"
+                app:popEnterAnim="@android:anim/slide_in_left" app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <fragment android:id="@+id/setPinFragment" android:name="com.alesharik.hack.app1.fragment.SetPinFragment"
+              android:label="fragment_set_pin" tools:layout="@layout/fragment_set_pin">
+        <argument
+                android:name="pin"
+                app:argType="string" />
+        <action android:id="@+id/action_setPinFragment_to_confirmPinFragment" app:destination="@id/confirmPinFragment"
+                app:enterAnim="@android:anim/slide_in_left" app:exitAnim="@android:anim/slide_out_right"
+                app:popEnterAnim="@android:anim/slide_in_left" app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <fragment android:id="@+id/confirmPinFragment" android:name="com.alesharik.hack.app1.fragment.ConfirmPinFragment"
+              android:label="fragment_confirm_pin" tools:layout="@layout/fragment_confirm_pin">
+        <action android:id="@+id/action_confirmPinFragment_to_biometryFragment" app:destination="@id/biometryFragment"/>
+    </fragment>
+    <fragment android:id="@+id/loginFragment" android:name="com.alesharik.hack.app1.fragment.LoginFragment"
+              android:label="fragment_login" tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_loginFragment_to_homeFragment" app:destination="@id/homeFragment"
+                app:popUpToInclusive="true" app:enterAnim="@android:anim/slide_in_left"
+                app:exitAnim="@android:anim/slide_out_right"
+                app:popEnterAnim="@android:anim/slide_in_left" app:popExitAnim="@android:anim/slide_out_right"
+                app:popUpTo="@id/nav_graph"/>
+    </fragment>
+    <fragment android:id="@+id/homeFragment" android:name="com.alesharik.hack.app1.fragment.HomeFragment"
+              android:label="fragment_home" tools:layout="@layout/fragment_home"/>
+    <fragment android:id="@+id/biometryFragment" android:name="com.alesharik.hack.app1.fragment.BiometryFragment"
+              android:label="fragment_biometry" tools:layout="@layout/fragment_biometry">
+        <action android:id="@+id/action_biometryFragment_to_homeFragment" app:destination="@id/homeFragment"
+                app:popUpTo="@id/nav_graph" app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

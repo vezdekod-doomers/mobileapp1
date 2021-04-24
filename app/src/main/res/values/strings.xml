@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">app1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Добро пожаловать</string>
+    <string name="set_pin">Установить PIN-код</string>
+    <string name="set_pin_title">Введите новый PIN-код</string>
+    <string name="login_title">Введите PIN-код</string>
+    <string name="login">Войти</string>
+    <string name="login_bio">Войти через биометрию</string>
+    <string name="confirm_pin_title">Подтвердите PIN-код</string>
+    <string name="biometry">Биометрия</string>
+    <string name="add">Добавить</string>
+    <string name="skip">Пропустить</string>
+    <string name="home">Это экран за PIN-ом</string>
+    <string name="error_wrong_pin">PIN неверен</string>
+    <string name="error_pin_short">PIN должен быть не меньше {} символов</string>
+</resources>
